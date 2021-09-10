@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Health is wealth</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      /* position: absolute; top: 0;
+      bottom: 0; */
+      width: 84%;
+      height: 500px;
+      margin: 10% auto;
+      border: 2px solid #1877f2;
+      box-shadow: -25px 18px 15px rgb(0 0 0 / 60%);
+    }
+
+    .MAPCONTAINER {
+      background-color: #f0f2f5;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/health.css" />
+  <link rel="stylesheet" href="css/search.css" />
+  <link rel="stylesheet" href="css/black.css" />
+
+  <style>
+    .mapboxgl-popup {
+      max-width: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="" class="kindly-care"><big> KINDLY CARE </big> </a> &nbsp &nbsp
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp;
+    <a href="" class="nav"> Home</a>
+    <a href="/blog" class="nav"> Blog</a>
+    <a href="/symp" class="nav"> Symptoms Checker</a>
+    <a href="/register" class="nav"> Raise Your Voice</a>
+    <a href="#sen" class="nav">Medicine Help</a>
+    <a href="#contactus" class="nav"> Contact Us</a> &nbsp &nbsp &nbsp &nbsp
+    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp;
+    <a href="/cowin" > <big class="covid">COVID 19</big> </a>
+  </nav>
+
+  <section class="page1">
+    <div class="first-page-body">
+      <p class="polo">
+        <span class="pok">Welcome to this all in one website.
+        <br>
+        Here we can see the availibility of beds and locate hospitals.
+        <br>
+         Our marquee feature is that when you enter a medicine name ,
+         <br>you can
+        
+          see the name of all medicines of same composition
+          <br> with their price and manufacturer. 
+          <br>
+            </span> 
+      </p>
+    
+    
+    
+  </section>
+
+  <!-- coming soon page  start-->
+
+  <section class="page2">
+
+    <div class="shop-container" id="shopblur">
+      <section class="shop-page">
+        <h1 class="bestsellers-headings"> OUR &nbsp; RECOMMENDATIONS</h1>
+        <div class="bestsellers">
+          <div class="shop-item"><img class="shop-card1" src="images/vitamin.jpg">
+            <div class="card1text">
+              Nector vitamin C
+              orange tablets <br>
+              <span class="shop-star">★★★★☆</span>
+              <r>(28,921)</r>
+            </div>
+
+
+          </div>
+          <div class="shop-item"><img class="shop-card1" src="images/mask.jpg">
+            <div class="card1text">
+              vebnor 3L ply <br> surgical masks
+              <span class="shop-star">★★★★☆</span>
+              <r>(68,876)</r>
+            </div>
+
+
+
+          </div>
+          <div class="shop-item"> <img class="shop-card1" src="images/bp.jpg">
+            <div class="card1text">
+              omron BP <br> monitor (digital)
+              <span class="shop-star">★★★☆☆</span>
+              <r>(8,143)</r>
+            </div>
+
+          </div>
+          <div class="shop-item"> <img class="shop-card1" src="images/ashva.jpg">
+            <div class="card1text">
+              himalaya ashvagandha (60)
+              <span class="shop-star">★★★★★</span>
+              <r>(8,29,867)</r>
+            </div>
+          </div>
+          <div class="shop-item"> <img class="shop-card1" src="images/ortho.jpg">
+            <div class="card1text">
+              Dr. ortho ayurvedic joint pain oil <br>
+              <span class="shop-star">★★★★☆</span>
+              <r>(2,19,897)</r>
+            </div>
+
+          </div>
+          <div class="shop-item"> <img class="shop-card1" src="images/bournvita.jpg">
+            <div class="card1text">
+              bournvita (500g, choclate flavored)
+              <span class="shop-star">★★★★★</span>
+              <r>(98,629)</r>
+            </div>
+
+
+          </div>
+          <div class="shop-item"> <img class="shop-card1" src="images/oximeter.jpg">
+            <div class="card1text">
+              fingertip pulse Oximeter
+              <span class="shop-star">★★★☆☆</span>
+              <r>(1,929)</r>
+            </div>
+
+          </div>
+          <div class="shop-item"> <img class="shop-card1" src="images/protien.jpg">
+            <div class="card1text">
+              muscle blaze protien (500g) <br>
+              <span class="shop-star">★★★☆☆</span>
+              <r>(8,629)</r>
+            </div>
+
+
+          </div>
+          <div class="shop-item"> <img class="shop-card1" src="images/giloy.jpg">
+            <div class="card1text">
+              dabur giloy neem juice (1L)
+              <span class="shop-star">★★★★★</span>
+              <r>(1,98,629)</r>
+            </div>
+
+          </div>
+          <div class="shop-item">
+            <img class="shop-card1" src="images/nebulizer.jpg">
+            <div class="card1text">
+              NISCOMED NB-117 Nebulizer
+              <span class="shop-star">★★★☆☆</span>
+              <r>(6,973)</r>
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+        <div class="shop-button-deals" style="height: 130px;">
+          <a href="#" class="shop-readmore shop-btn-text" onclick=" toggle()"> Add To Cart →</a>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div id="shoppopup">
+      <div>
+        <h1> COMING SOON......</h1> <br> <br> <br>
+      </div>
+      <h2> OOps!!! </h2>
+      <h3>Service not availabe yet ... </h3>
+      <br>
+      <br>
+      <a class="shop-close" href="#" onclick="toggle()"> CLOSE </a>
+
+
+    </div>
+
+    <script type="text/javascript">
+      function toggle() {
+
+        var shopblur = document.getElementById('shopblur');
+        shopblur.classList.toggle('active')
+
+        var shoppopup = document.getElementById('shoppopup');
+        shoppopup.classList.toggle('active')
+
+      }
+
+
+    </script>
+
+
+
+
+
+
+
+
+  </section>
+
+
+  <!-- coming soon page  finish-->
+
+
+
+
+
+
+
+
+  <!-- map page  start-->
+
+  <section>
+    <div class="MAPCONTAINER">
+      <div id="map"></div>
+    </div>
+  </section>
+  <a name="sen"> </a>
+  <section class="page3" id="gggg">
+    <style>
+      ul {
+        list-style: none;
+      }
+
+      li {
+        padding: 10px 0;
+        line-height: 1.2rem;
+      }
+
+      #app {
+        color: black;
+        font-family: "Bree Serif", serif;
+        font-size: 18px;
+        text-align: center;
+        width: 60%;
+        /* border: 2px solid brown; */
+      }
+
+      #id0 {
+        display: flex;
+        /* border: 8px solid red; */
+      }
+
+      .id12 {
+        width: 30%;
+        border-right: 1.2px solid #00a400;
+        height: 500px;
+        padding: 35px 20px;
+        text-align: center;
+      }
+
+      .monop {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 160%;
+      }
+      .acer
+      {
+       color:  #1877f2;
+       font-size: 36px;
+       padding-top: 20px;
+      }
+    </style>
+
+    <form id="search-books">
+      <label class="jk" for="search">Search:</label> &nbsp; &nbsp;&nbsp;
+      <input type="text" name="search" id="search" required />
+      <button class="lo" name="search_btn">Search</button>
+      <input class="lo" value="reset" type="reset">
+    </form>
+    <div id="id0">
+      <div class="id12">
+        <h1 class="acer">No Medicine Monopoly</h1>
+        <br>
+        <p class="monop">This will help you all to find the medicine of same composition
+          of different &nbsp;&nbsp;&nbsp;companies.So select the organic,standard medicine
+          and save our money.This feature saves patients from monopoly of health mafias.
+        </p>
+      </div>
+      <div id="app"></div>
+    </div>
+
+    <script>
+      var books = [
+        {
+          P1: "Medicine1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price:	&#8377;123 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Manufacturer:Cipla",
+          P2: " Medicine2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;56  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Manufacturer:Ranbaxy",
+          P3: "Medicine3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;305 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manufacturer: Appolo",
+          P4: "Medicine4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;123 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manufacturer:Cadillila",
+          P5: "Medicine5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;96  &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; Manufacturer:Abbot",
+        },
+        {
+          P1: "Pain1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price: 	&#8377;123 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manufacturer:Cipla",
+          P2: " Pain1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price:	&#8377;56  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Manufacturer:Ranbaxy",
+          P3: "Pain3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;305  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Manufacturer: Appolo",
+          P4: "Pain4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price:	&#8377;123  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Manufacturer:Cadillila",
+          P5: "Pain5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price:	&#8377;96 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manufacturer:Abbot",
+        },
+        {
+          P1: "Cancer1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price:	&#8377;1223&nbsp;&nbsp;&nbsp;  &nbsp; &nbsp;  Manufacturer:Cipla",
+          P2: " Cancer2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;560 &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; Manufacturer:Ranbaxy",
+          P3: "Cancer3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price:	&#8377;3050 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Manufacturer: Appolo",
+          P4: "Cancer4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;123&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;  Manufacturer:Cadillila",
+          P5: "CARCOGEN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;9600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manufacturer:Abbot",
+        },
+        {
+          P1: "Anticals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price:	&#8377;123 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Manufacturer:Cipla",
+          P2: " Fever2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;56  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Manufacturer:Ranbaxy",
+          P3: "fever3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;305 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manufacturer: Appolo",
+          P4: "Fever4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;123 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manufacturer:Cadillila",
+          P5: "Dolo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;96  &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; Manufacturer:Abbot",
+        },
+        {
+          P1: "Medicine1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price:	&#8377;123 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Manufacturer:Cipla",
+          P2: " Medicine2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;56  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Manufacturer:Ranbaxy",
+          P3: "Medicine3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;305 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manufacturer: Appolo",
+          P4: "Medicine4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;123 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manufacturer:Cadillila",
+          P5: "Medicine5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;96  &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; Manufacturer:Abbot",
+        },
+        {
+          P1: "Medicine1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price:	&#8377;123 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Manufacturer:Cipla",
+          P2: " Medicine2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;56  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Manufacturer:Ranbaxy",
+          P3: "Medicine3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;305 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manufacturer: Appolo",
+          P4: "Medicine4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;123 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manufacturer:Cadillila",
+          P5: "Medicine5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:	&#8377;96  &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; Manufacturer:Abbot",
+        },
+      ];
+
+      var render = function (data) {
+        var app = document.getElementById("app");
+        var booksHTMLString =
+          "<ul>" +
+          data
+            .map(function (book) {
+              return (
+                "<li>" +
+                "<strong>1:  </strong>" +
+                book.P1 +
+                "<br/>" +
+                "<strong>2:  </strong>" +
+                book.P2 +
+                "<br/>" +
+                "<strong>3:  </strong>" +
+                book.P3 +
+                "<br/>" +
+                "<strong>4:  </strong>" +
+                book.P4 +
+                "<br/>" +
+                "<strong>5:  </strong>" +
+                book.P5 +
+                "<br/>" +
+                "</li>"
+              );
+            })
+            .join("");
+        +"</ul>";
+
+        app.innerHTML = booksHTMLString;
+      };
+
+      // is handlesearch se event listen hoga submit buttom ka
+      var handleSearch = function (event) {
+        event.preventDefault();
+
+        // ye searchterm store krega input vale ko
+        var searchTerm = event.target.elements["search"].value;
+
+        // Tokenize the search terms and remove empty spaces
+        var tokens = searchTerm
+          .toLowerCase()
+          .split(" ")
+          .filter(function (token) {
+            return token.trim() !== "";
+          });
+
+        if (tokens.length) {
+          //  Create a regular expression of all the search terms
+          var searchTermRegex = new RegExp(tokens.join("|"), "gim");
+          var filteredList = books.filter(function (book) {
+            // Create a string of all object values
+            var bookString = "";
+            for (var key in book) {
+              if (book.hasOwnProperty(key) && book[key] !== "") {
+                bookString += book[key].toString().toLowerCase().trim() + " ";
+              }
+            }
+            // Return book objects where a match with the search regex if found
+            return bookString.match(searchTermRegex);
+          });
+          // Render the search results
+          render(filteredList);
+        }
+      };
+
+      document.addEventListener("submit", handleSearch);
+
+      document.addEventListener("reset", function (event) {
+        event.preventDefault();
+        render(books);
+      });
+    </script>
+  </section>
+
+  <!-- BMI PAGE START-->
+  <section class="page4">
+    <div class="container">
+      <div class="card">
+        <div class="card-header"><b>BMI CALCULATOR</b></div>
+        <div class="card-body">
+          <form class="auto" onsubmit="return false">
+            <div class="form-group">
+              <label>WEIGHT:</label>
+              <input type="number" name="" id="weight" size="2rem" placeholder="Weight in kg" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label>HEIGHT:&nbsp;</label>
+              <input type="text" name="" id="height" size="20rem" placeholder="Height in ft" value="" required
+                class="form-control" />
+            </div>
+            <div class="form-group">
+              <label>VALUE:&nbsp;&nbsp;&nbsp;</label>
+              <input type="number" name="" id="bmivalue" font-size="10rem" required class="form-control" />
+            </div>
+            <div>
+              <button type="submit" class="btnn" onclick="getbmivalue()">
+                check bmi
+              </button>
+            </div>
+          </form>
+          <div>
+            <img src="images/calculator.png" width="200rem" height="200rem" style="margin-top: 100px" />
+          </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <span class="range-of-bmi">
+          A healthy<b> BMI</b> range between 19 to 25</span>
+      </div>
+    </div>
+
+    <script>
+      function myFunction0() {
+        var x = document.getElementById("g");
+        if (x.style.display === "none") {
+          x.style.display = "flex";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      function myFunction1() {
+        var y = document.getElementById("e");
+        if (y.style.display === "none") {
+          y.style.display = "flex";
+        } else {
+          y.style.display = "none";
+        }
+      }
+      function myFunction2() {
+        var z = document.getElementById("f");
+        if (z.style.display === "none") {
+          z.style.display = "flex";
+        } else {
+          z.style.display = "none";
+        }
+      }
+      function myFunction3() {
+        var l = document.getElementById("h");
+        if (l.style.display === "none") {
+          l.style.display = "flex";
+        } else {
+          l.style.display = "none";
+        }
+      }
+    </script>
+    <script>
+      function getbmivalue() {
+        var weight = document.getElementById("weight").value;
+        var height = document.getElementById("height").value;
+
+        height = height * 12;
+        height = height * 0.025; // now height in meter
+        var newbmivalue = weight / (height * height);
+        newbmivalue = Math.round(newbmivalue);
+
+        document.getElementById("bmivalue").value = newbmivalue;
+      }
+    </script>
+  </section>
+  <!-- BMI PAGE FINISH-->
+
+  <!-- CONTACT US PAGE STArt-->
+  <a name="contactus"> </a>
+  <section class="page5">
+    <h1>
+      <span class="contact-us"> Contact Us</span>
+    </h1>
+
+    <div class="feedback">
+      <form>
+        <div class="box-name">
+          <div class="contact-us-name">
+            <input class="name" type="text" placeholder="Your Name" required />
+          </div>
+          <div class="contact-us-name">
+            <input class="name" type="email" placeholder="Email" required />
+          </div>
+          <div class="contact-us-name">
+            <input class="name" type="text" placeholder="Subject" required />
+          </div>
+          <br />
+          <div class="contact-us-message">
+            <textarea class="review" placeholder="Message" maxlength="240" rows="4" required></textarea>
+          </div>
+          <br />
+
+          <input class="contact-us-choosefile" type="file" value="submit" /><br />
+
+          <input class="contact-us-submit" id="submit-contact-us" type="submit" value="SUBMIT" />
+        </div>
+      </form>
+      <div class="2box"></div>
+    </div>
+  </section>
+  <!-- CONTACT US PAGE finish-->
+
+  <!-- LASRT PAGE START-->
+  <section class="page7">
+    <div class="end-page">
+      <div class="navigation-items">
+        <span class="navigation"> Navigation </span><br />
+        <br />
+
+        <div class="more">home</div>
+        <div class="more">about us</div>
+        <div class="more">services</div>
+        <div class="more">our treatment</div>
+        <div class="more">our hospitals</div>
+        <div class="more">become our partner</div>
+        <div class="more">contact</div>
+        <div class="more">disclaimer</div>
+      </div>
+
+      <div class="items">
+        <br />
+        <span1 class="followuson">Follow Us On</span1> <br />
+        <br />
+        <div class="box2">
+          <div><img class="card1" id="fb" src="images/fb.png" /></div>
+          <div class="more">facebook</div>
+          <div><img class="card1" id="insta" src="images/insta.jpeg" /></div>
+          <div class="more">instagram</div>
+          <div>
+            <img class="card1" id="linkdin" src="images/linkdin.png" />
+          </div>
+          <div class="more">linkdin</div>
+          <div><img class="card1" id="github" src="images/github.png" /></div>
+          <div class="more">github</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="copyright">
+      Copyright <big>©</big> 2021 All rights reserved
+    </footer>
+  </section>
+  <!-- LASRT PAGE FINISH-->
+</body>
+
+<script>
+  mapboxgl.accessToken =
+    "pk.eyJ1Ijoic3VsdGFuaWEyMDA5IiwiYSI6ImNrb3NkdmZ4cTAwaWsyeW52dW5lMmVrMWgifQ.eRgXcqznMP0-6y-HA8iKhQ";
+  var map = new mapboxgl.Map({
+    container: "map",
+    style: "mapbox://styles/mapbox/streets-v11",
+    center: [85.11984142415537, 25.582483018337157],
+    zoom: 12,
+  });
+  map.on("load", function () {
+    map.addSource("places", {
+      type: "geojson",
+      data: {
+        type: "FeatureCollection",
+        features: [
+          {
+            type: "Feature",
+            properties: {
+              description:
+                "<strong>AIIMS PATNA <BR> Oxygen beds:19<br>ICU avilable:3</strong>",
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [85.04204937505921, 25.56026975445951],
+            },
+          },
+          {
+            type: "Feature",
+            properties: {
+              description:
+                "<strong>IGIMS PATNA <BR> Oxygen beds:49<br>ICU avilable:11</strong>",
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [85.089346619266, 25.612332773240652],
+            },
+          },
+
+          {
+            type: "Feature",
+            properties: {
+              description:
+                "<strong>IGIMS PATNA <BR> Oxygen beds:49<br>ICU avilable:11</strong>",
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [85.089346619266, 25.612332773240652],
+            },
+          },
+
+          {
+            type: "Feature",
+            properties: {
+              description:
+                "<strong>MKBSH PATNA <BR> Oxygen beds:49<br>ICU avilable:11</strong>",
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [85.14213141181006, 25.581103976208894],
+            },
+          },
+
+          {
+            type: "Feature",
+            properties: {
+              description:
+                "<strong>Paras HMRI PATNA <BR> Oxygen beds:8<br>ICU avilable:0</strong>",
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [85.08258264883608, 25.60554926729047],
+            },
+          },
+
+          {
+            type: "Feature",
+            properties: {
+              description:
+                "<strong>JEEWAN JYOTI HOSPITAL PATNA <BR> Oxygen beds:54<br>ICU avilable:19</strong>",
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [85.15295440867294, 25.57181680427192],
+            },
+          },
+
+          {
+            type: "Feature",
+            properties: {
+              description:
+                "<strong>NMCH PATNA <BR> Oxygen beds:38<br>ICU avilable:16</strong>",
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [85.19437614214485, 25.602303993778875],
+            },
+          },
+
+          {
+            type: "Feature",
+            properties: {
+              description:
+                "<strong>PMCH hospital <BR> Oxygen beds:78<br>ICU avilable:20</strong>",
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [85.15774578062548, 25.620886162705247],
+            },
+          },
+        ],
+      },
+    });
+    // Add a layer showing the places.
+    map.addLayer({
+      id: "places",
+      type: "circle",
+      source: "places",
+      paint: {
+        "circle-color": "#CB1313",
+        "circle-radius": 6,
+        "circle-stroke-width": 2,
+        "circle-stroke-color": "#ffffff",
+      },
+    });
+
+    // Create a popup, but don't add it to the map yet.
+    var popup = new mapboxgl.Popup({
+      closeButton: false,
+      closeOnClick: false,
+    });
+
+    map.on("mouseenter", "places", function (e) {
+      // Change the cursor style as a UI indicator.
+      map.getCanvas().style.cursor = "pointer";
+
+      var coordinates = e.features[0].geometry.coordinates.slice();
+      var description = e.features[0].properties.description;
+
+      // Ensure that if the map is zoomed out such that multiple
+      // copies of the feature are visible, the popup appears
+      // over the copy being pointed to.
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+      }
+
+      // Populate the popup and set its coordinates
+      // based on the feature found.
+      popup.setLngLat(coordinates).setHTML(description).addTo(map);
+    });
+
+    map.on("mouseleave", "places", function () {
+      map.getCanvas().style.cursor = "";
+      popup.remove();
+    });
+  });
+</script>
+
+</html>

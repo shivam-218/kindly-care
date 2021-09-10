@@ -1,0 +1,28 @@
+
+#search-books{
+    background-color: #ffad1e;
+    padding: 35px 120px 30px;
+    /* text-align: center; */
+}
+#search{
+    font-size: larger;
+    /* border: 2px solid #696e79;; */
+    background-color: #f2f2f2;
+    color: #1c1e21;
+}
+.jk
+{
+        /* color: white; */
+        font-weight: 800;
+        font-size: 22px;
+        color: #1c1e21;
+}
+.lo{
+    margin-left: 1.5rem;
+    /* background-color:#696e79;; */
+    color: white;
+    font-weight: 900;
+    width: 100px;
+    height: 30px;
+    color: #1c1e21;
+  }

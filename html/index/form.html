@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style type="text/css">
+      .whol {
+        display: flex;
+        flex-direction: row;
+        /* border: 5px solid grey; */
+        margin: 45px 0px;
+        height: 550px;
+        background: #f0f2f5;
+      }
+      .sidebar {
+        /* border: 8px solid red; */
+        width: 55%;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      .form-style-2 {
+        border-right: 2px solid #ddd;
+        width: 60%;
+        max-width: 45%;
+        padding: 20px 12px 10px 20px;
+        font: 15px Arial, Helvetica, sans-serif;
+        margin: 0% 1%;
+      }
+      .form-style-2-heading {
+        font-weight: bold;
+        font-style: italic;
+        border-bottom: 2px solid #ddd;
+        margin-bottom: 30px;
+        font-size: 28px;
+        padding-bottom: 15px;
+      }
+      .form-style-2 label {
+        display: block;
+        margin: 0px 0px 15px 0px;
+      }
+      .form-style-2 label > span {
+        width: 100px;
+        font-weight: bold;
+        float: left;
+        padding-top: 8px;
+        padding-right: 5px;
+      }
+      .form-style-2 span.required {
+        color: red;
+      }
+      .form-style-2 .tel-number-field {
+        width: 290px;
+      }
+      .form-style-2 input.input-field,
+      .form-style-2 .select-field {
+        width: 48%;
+      }
+      .form-style-2 input.input-field,
+      .form-style-2 .tel-number-field,
+      .form-style-2 .textarea-field,
+      .form-style-2 .select-field {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        border: 1px solid #c2c2c2;
+        box-shadow: 1px 1px 4px #ebebeb;
+        border-radius: 3px;
+        padding: 7px;
+        outline: none;
+      }
+      /* .form-style-2 .input-field:focus,
+      .form-style-2 .tel-number-field:focus,
+      .form-style-2 .textarea-field:focus,
+      .form-style-2 .select-field:focus {
+        border: 1px solid #0c0;
+      } */
+      /* textarea {
+        outline: none;
+      } */
+      .form-style-2 .textarea-field {
+        height: 100px;
+        width: 55%;
+      }
+      .form-style-2 input[type="submit"],
+      .form-style-2 input[type="button"] {
+        border: none;
+        padding: 8px 15px 8px 15px;
+        background: #ff8500;
+        color: #fff;
+        box-shadow: 1px 1px 4px #dadada;
+        -moz-box-shadow: 1px 1px 4px #dadada;
+        -webkit-box-shadow: 1px 1px 4px #dadada;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+      }
+      .form-style-2 input[type="submit"]:hover,
+      .form-style-2 input[type="button"]:hover {
+        background: #ea7b00;
+        color: #fff;
+        cursor: pointer;
+      }
+      .fb h2 {
+        text-align: center;
+        padding-top: 60px;
+        padding-bottom: 20px;
+        /* font-family: Georgia, 'Times New Roman', Times, serif; */
+        color: #1877f2;
+        font-size: 38px;
+      }
+      .bbc {
+        line-height: 1.6;
+        color: #1c1e21;
+        font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+        padding-left: 35x;
+        padding-right: 19px;
+      }
+      .check {
+        font-size: 16px;
+        font-weight: bold;
+        padding-bottom: 15px;
+      }
+      .v {
+        padding-right: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="whol">
+      <div class="form-style-2">
+        <div id="raise" class="form-style-2-heading">Raise your voice</div>
+        <form action="/register" method="post">
+          <label for="field1"
+            ><span>Name </span
+            ><input
+              type="text"
+              class="input-field"
+              name="name"
+              value=""
+              required
+              placeholder="Please enter your Name"
+          /></label>
+          <label for="field2"
+            ><span>Email </span
+            ><input
+              type="text"
+              class="input-field"
+              name="email"
+              value=""
+              required
+              placeholder="Please enter your Email id"
+          /></label>
+          <label
+            ><span>Telephone</span
+            ><input
+              type="number"
+              class="tel-number-field"
+              name="telephone"
+              placeholder="Please enter your number"
+              value=""
+              required
+            />
+          </label>
+          <label for="field4"
+            ><span>State <span class="required">*</span></span
+            ><select name="state" class="select-field">
+              <option value="General Question">Bihar</option>
+              <option value="Advertise">Gujarat</option>
+              <option value="Partnership">Uttar Pradesh</option>
+            </select></label
+          >
+          <label for="field2"
+            ><span>City <span class="required">*</span></span
+            ><input
+              type="text"
+              class="input-field"
+              name="city"
+              value=""
+              required
+              placeholder="Please enter your city"
+          /></label>
+
+          <div class="check">
+            Ambulance<input type="checkbox" class="v"
+             name="ambulance" value="Boat" />
+            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; Remdisiever
+            <input type="checkbox" class="v"
+             name="rem" value="Car" /><br />
+            Oxygen&nbsp; &nbsp; &nbsp;
+            <input type="checkbox" class="v" name="oxy" value="Bike" />
+            &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; Others &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp;<input
+              type="checkbox"
+              class="v"
+              name="others"
+              value="Bat"
+            />
+          </div>
+
+          <label for="field5"
+            ><span>Message <span class="required">*</span></span
+            ><textarea
+              class="input-field"
+              class="textarea-field"
+              name="message"
+              value=""
+              cols="40"
+              rows="4"
+              required
+            >
+            </textarea>
+          </label>
+          <label for=""
+            ><span>Proof <span class="required">*</span></span
+            ><input type="file" name="proof" value=""
+            required
+          /></label>
+
+          <label><span> </span><input type="submit" value="Submit" /></label>
+        </form>
+      </div>
+      <div class="sidebar">
+        <div class="fb">
+          <h2>BLACK MARKET:A CURSE TO HUMANITY</h2>
+          <p class="bbc">
+            These scammers have taken enough advantage <br />
+            &nbsp;&nbsp; of your emotions, innocence and desperate<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; needs. India, it’s your time to stand up<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp;and fight back.<br /><br />
+            So tell us so we could identify the common scammers. We share this
+            database to police keeping your identity secret.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
